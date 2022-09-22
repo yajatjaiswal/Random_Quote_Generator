@@ -67,6 +67,8 @@ console.log(result);
     // console.log("clicked")
 }
 
+      randomQuote();
+      
 soundBtn.addEventListener("click", () => {
     let utterance = new SpeechSynthesisUtterance(`${quoteText.innerText} by ${authorName.innerText}` );
     speechSynthesis.speak(utterance);
