@@ -44,6 +44,7 @@
     soundBtn = document.querySelector(".sound"),
     copyBtn = document.querySelector(".copy"),
     twitterBtn = document.querySelector(".twitter");
+      var randomNumber = Math.floor(Math.random() * 100);
 
 
 function randomQuote() {
@@ -51,7 +52,7 @@ function randomQuote() {
     quoteBtn.innerText = "Loading Quote...";
     fetch("https://type.fit/api/quotes").then(res => res.json()).then(result => {
 console.log(result);
-      console.log(result[randomNumber]["text"]+  data[randomNumber]["author"]);
+      console.log(result[randomNumber]["text"]+  result[randomNumber]["author"]);
        
         
         quoteText.innerText ='~'+
