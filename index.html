@@ -50,10 +50,14 @@ function randomQuote() {
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "Loading Quote...";
     fetch("https://type.fit/api/quotes").then(res => res.json()).then(result => {
-        console.log(result);
-        quoteText.innerText = result.content;
-        authorName.innerText = result.author;
-
+console.log(result);
+       
+        
+        qouteText.innerHTML ='~'+
+        result[randomNumber]["text"] ;
+        authorName.innerHTML = 
+        "\"" +result[randomNumber]["author"] +"\"";
+      
         quoteBtn.innerText = "New Quote";
         quoteBtn.classList.remove("loading");
     });
