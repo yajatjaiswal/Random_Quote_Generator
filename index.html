@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <!-- https://www.codingnepalweb.com/random-quote-generator-html-javascript/ -->
+   
     <div class="wrapper">
       <header>Quote of the Day</header>
       <div class="content">
@@ -48,7 +48,7 @@
 function randomQuote() {
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "Loading Quote...";
-    fetch("http://api.quotable.io/random").then(res => res.json()).then(result => {
+    fetch("https://api.quotable.io/random").then(res => res.json()).then(result => {
         console.log(result);
         quoteText.innerText = result.content;
         authorName.innerText = result.author;
